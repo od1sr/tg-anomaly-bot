@@ -7,6 +7,7 @@ BOT_TOKEN = os.getenv('BOT_TOKEN')
 SAVE_DIR = "images"
 WEBHOOK_PATH = os.getenv('WEBHOOK_PATH')
 WEBHOOK_URL = os.getenv('WEBHOOK_URL')
+PORT = os.getenv('PORT')
 
 WELCOME_MESSAGE = """
 👋 Привет! Я — Anomaly Detection Bot.

@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from Bot import bot
 from Bot.utils import sendImagesToUser
 from telebot.types import Update
-from config import WEBHOOK_PATH, WEBHOOK_URL, SAVE_DIR
+from config import WEBHOOK_PATH, WEBHOOK_URL, PORT
 from models import ImageData, ImageProcessResponse
 from ai import process_image
 
@@ -58,4 +58,4 @@ if __name__ == "__main__":
     import uvicorn
     bot.delete_webhook()
     bot.set_webhook(WEBHOOK_URL)
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=PORT)
